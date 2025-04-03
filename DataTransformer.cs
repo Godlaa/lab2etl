@@ -39,10 +39,12 @@ namespace Lab2ETL
 
         public void CreatePostgresTable()
         {
+            string ddlPath = Path.Combine("DDL", "normalized.sql");
+
             using (var pgConn = new NpgsqlConnection(pgConnString))
             {
                 pgConn.Open();
-                string ddl = File.ReadAllText("D:\\Lab2ETL\\DDL\\normalized.sql");
+                string ddl = File.ReadAllText(ddlPath);
                 var command = new NpgsqlCommand(ddl, pgConn);
                 command.ExecuteNonQuery();
                 pgConn.Close();
