@@ -13,18 +13,17 @@ class Program
     static async Task Main(string[] args)
     {
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-        string host = "localhost";
-        string port = "5432";
-        string dbName = "postgres";
-        string user = "postgres";
-        string password = "12345";
-        string sqliteConnString = @"Data Source=D:\sqliteDB\orders_denormalized.db";
+        string host = Environment.GetEnvironmentVariable("POSTGRES_HOST") ?? "postgres";
+        string port = Environment.GetEnvironmentVariable("POSTGRES_PORT") ?? "5432";
+        string dbName = Environment.GetEnvironmentVariable("POSTGRES_DB") ?? "orders";
+        string user = Environment.GetEnvironmentVariable("POSTGRES_USER") ?? "postgres";
+        string password = Environment.GetEnvironmentVariable("POSTGRES_PASSWORD") ?? "postgres";
         string pgConnString = $"Host={host};Port={port};Database={dbName};Username={user};Password={password};";
         string[] actions = { "1. Создать таблицу в SQLite", "2. Создать таблицу в PostgreSQL", "3. Заполнить таблицу в SQLite", "4. Экспортировать данные в PostgreSQL", "5. Экспорт в Excel", "6. Выбор метода получения данных Сокеты/Очередь сообщений", "7. Выход" };
         bool done = false;
         int communticator = -1;
 
-        DataTransformer transformer = new DataTransformer(sqliteConnString, pgConnString);
+        DataTransformer transformer = new DataTransformer(pgConnString);
 
         while (!done)
         {

@@ -14,9 +14,8 @@ namespace Lab2ETL
         private string sqliteConnString;
         private string pgConnString;
 
-        public DataTransformer(string sqliteConnString, string pgConnString)
+        public DataTransformer(string pgConnString)
         {
-            this.sqliteConnString = sqliteConnString;
             this.pgConnString = pgConnString;
         }
 
