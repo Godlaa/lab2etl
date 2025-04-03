@@ -5,7 +5,7 @@ services:
     build: .
     environment:
       - POSTGRES_HOST=postgres
-      - POSTGRES_DB=orders
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     depends_on:
@@ -15,7 +15,7 @@ services:
   postgres:
     image: postgres:15
     environment:
-      POSTGRES_DB: orders
+      POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
