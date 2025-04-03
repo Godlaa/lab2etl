@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./DDL:/app/DDL
+      - ./DML:/app/DML
+    environment:
+      - SQLITE_CONN_STRING=Data Source=/app/data/orders_denormalized.db
+      - PG_CONN_STRING=Host=postgres;Database=orders;Username=postgres;Password=postgres
+      - RABBITMQ_HOST=rabbitmq
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  pgdata:
