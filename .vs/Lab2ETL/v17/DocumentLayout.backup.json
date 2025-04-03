@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Lab2ETL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Lab2ETL\\obj\\Debug\\net8.0\\Lab2ETL.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\Lab2ETL.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\lab2etl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:lab2etl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -15,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,20 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Lab2ETL.AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Lab2ETL\\obj\\Debug\\net8.0\\Lab2ETL.AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\Lab2ETL.AssemblyInfo.cs",
-              "ToolTip": "D:\\Lab2ETL\\obj\\Debug\\net8.0\\Lab2ETL.AssemblyInfo.cs",
-              "RelativeToolTip": "obj\\Debug\\net8.0\\Lab2ETL.AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T17:40:05.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "D:\\Lab2ETL\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -92,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Lab2ETL\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -118,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "export_report.py",
               "DocumentMoniker": "D:\\Lab2ETL\\Export\\export_report.py",
               "RelativeDocumentMoniker": "Export\\export_report.py",
@@ -130,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "normalized.sql",
               "DocumentMoniker": "D:\\Lab2ETL\\DDL\\normalized.sql",
               "RelativeDocumentMoniker": "DDL\\normalized.sql",
@@ -142,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DataTransformer.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\DataTransformer.cs",
               "RelativeDocumentMoniker": "DataTransformer.cs",
@@ -154,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "fill_denormalized.sql",
               "DocumentMoniker": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
               "RelativeDocumentMoniker": "DML\\fill_denormalized.sql",
@@ -166,20 +149,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Lab2ETL.csproj",
               "DocumentMoniker": "D:\\Lab2ETL\\Lab2ETL.csproj",
               "RelativeDocumentMoniker": "Lab2ETL.csproj",
               "ToolTip": "D:\\Lab2ETL\\Lab2ETL.csproj",
               "RelativeToolTip": "Lab2ETL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-04-03T12:50:56.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "orders_denormalized.sql",
               "DocumentMoniker": "D:\\Lab2ETL\\DDL\\orders_denormalized.sql",
               "RelativeDocumentMoniker": "DDL\\orders_denormalized.sql",
@@ -191,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "ExportModule.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\Export\\ExportModule.cs",
               "RelativeDocumentMoniker": "Export\\ExportModule.cs",

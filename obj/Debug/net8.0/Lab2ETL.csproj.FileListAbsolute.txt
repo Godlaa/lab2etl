@@ -10,8 +10,6 @@ D:\Lab2ETL\bin\Debug\net8.0\Npgsql.dll
 D:\Lab2ETL\bin\Debug\net8.0\SQLitePCLRaw.core.dll
 D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.csproj.AssemblyReference.cache
 D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.AssemblyInfoInputs.cache
-D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.AssemblyInfo.cs
 D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.csproj.CoreCompileInputs.cache
 D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.csproj.Up2Date
 D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.dll
