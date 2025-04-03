@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lab2ETL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84e4af888091186fc702ae2b086b1a490bef13c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lab2ETL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lab2ETL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

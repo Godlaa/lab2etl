@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "D:\\Lab2ETL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\dml\\fill_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:dml\\fill_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,12 +11,40 @@
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\ddl\\orders_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:ddl\\orders_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{D48A8AE3-DA48-C616-0090-E6AC70D7F728}|..\\ClientETL\\ClientETL.csproj|d:\\clientetl\\queueclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D48A8AE3-DA48-C616-0090-E6AC70D7F728}|..\\ClientETL\\ClientETL.csproj|d:\\clientetl\\clientetl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D48A8AE3-DA48-C616-0090-E6AC70D7F728}|..\\ClientETL\\ClientETL.csproj|d:\\clientetl\\datasender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D48A8AE3-DA48-C616-0090-E6AC70D7F728}|..\\ClientETL\\ClientETL.csproj|d:\\clientetl\\pathconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\ddl\\normalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:ddl\\normalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\export\\export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:export\\export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\dml\\fill_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:dml\\fill_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\ddl\\orders_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:ddl\\orders_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\lab2etl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:lab2etl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\export\\exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:export\\exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,55 +66,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Lab2ETL\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDQAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T08:32:33.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fill_denormalized.sql",
-              "DocumentMoniker": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
-              "RelativeDocumentMoniker": "DML\\fill_denormalized.sql",
-              "ToolTip": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
-              "RelativeToolTip": "DML\\fill_denormalized.sql",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-03T08:00:05.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExportModule.cs",
-              "DocumentMoniker": "D:\\Lab2ETL\\ExportModule.cs",
-              "RelativeDocumentMoniker": "ExportModule.cs",
-              "ToolTip": "D:\\Lab2ETL\\ExportModule.cs",
-              "RelativeToolTip": "ExportModule.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:56:00.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "export_report.py",
-              "DocumentMoniker": "D:\\Lab2ETL\\export_report.py",
-              "RelativeDocumentMoniker": "export_report.py",
-              "ToolTip": "D:\\Lab2ETL\\export_report.py",
-              "RelativeToolTip": "export_report.py",
+              "DocumentMoniker": "D:\\Lab2ETL\\Export\\export_report.py",
+              "RelativeDocumentMoniker": "Export\\export_report.py",
+              "ToolTip": "D:\\Lab2ETL\\Export\\export_report.py",
+              "RelativeToolTip": "Export\\export_report.py",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVDhPpZCxaxNhGMZ/9zVJaUuDUlq1FBWLZBFTCXo4BFyU1qGKi4OkIHhkzF/g0KF00M2lR9YUdDDQQVAcJILoQUd1UNRmkhoRm8RL777v7nOoCZd4AcEH3uF5nvd73vd74X\u002BgtTai3LIsHeWDEEJct217a1DvwbIs7bpubFUqFW3b9naxWLwWfSOipAvHcfqqi0KhkMtms3cty1rsaomeG4FpmoMSANVqlXQ6nQMWgacMC4hOBchduEj\u002ByjKjScGh8SS1Wq3nxQZEN3j1eY/Vrfe8rTeQvsf89ARLS1cz5XIZ/uUGXxptQiVRUhJIybudXaZn52a7vbEBpmkyNb/A69YM9W8tDEJOTI2hpI\u002BSkvOZH2f13sNAB\u002B07sV9wHIdH9Unquz9RvoeUPtL3UFISKkky\u002BAT7HwTi6FpsgGma3N9\u002Bg5I\u002BKaFZyU8wOpJChwHnjiuE9wKCXyC/zsQGOI7DeELjtiUPbgky6Wd/HA3KBelC4AIpNfQGl88cQ0mfI5PugRhKkM2DUk0INYwtPI/dAGAlf4rbl06T6DyBVgeCABJzYPhwcm0V8ICNvwJKpVIf37h3IxSyKVAuBMDIYQAMw1jvaxwGrYNl3Xq5o79vat3Y3Nedj4\u002B11je7/m\u002BXOuyzFtDhUgAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-04-03T07:55:19.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T07:55:19.388Z"
             },
             {
               "$type": "Document",
@@ -110,12 +99,96 @@
               "RelativeToolTip": "DDL\\normalized.sql",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-03T07:40:39.898Z",
+              "WhenOpened": "2025-04-03T07:40:39.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataTransformer.cs",
+              "DocumentMoniker": "D:\\Lab2ETL\\DataTransformer.cs",
+              "RelativeDocumentMoniker": "DataTransformer.cs",
+              "ToolTip": "D:\\Lab2ETL\\DataTransformer.cs",
+              "RelativeToolTip": "DataTransformer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAjwDwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:36:36.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QueueClient.cs",
+              "DocumentMoniker": "D:\\ClientETL\\QueueClient.cs",
+              "RelativeDocumentMoniker": "..\\ClientETL\\QueueClient.cs",
+              "ToolTip": "D:\\ClientETL\\QueueClient.cs",
+              "RelativeToolTip": "..\\ClientETL\\QueueClient.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T14:20:38.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataSender.cs",
+              "DocumentMoniker": "D:\\ClientETL\\DataSender.cs",
+              "RelativeDocumentMoniker": "..\\ClientETL\\DataSender.cs",
+              "ToolTip": "D:\\ClientETL\\DataSender.cs",
+              "RelativeToolTip": "..\\ClientETL\\DataSender.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T14:22:30.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientETL.csproj",
+              "DocumentMoniker": "D:\\ClientETL\\ClientETL.csproj",
+              "RelativeDocumentMoniker": "..\\ClientETL\\ClientETL.csproj",
+              "ToolTip": "D:\\ClientETL\\ClientETL.csproj",
+              "RelativeToolTip": "..\\ClientETL\\ClientETL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-03T14:25:42.08Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "PathConfig.cs",
+              "DocumentMoniker": "D:\\ClientETL\\PathConfig.cs",
+              "RelativeDocumentMoniker": "..\\ClientETL\\PathConfig.cs",
+              "ToolTip": "D:\\ClientETL\\PathConfig.cs",
+              "RelativeToolTip": "..\\ClientETL\\PathConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:14:53.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fill_denormalized.sql",
+              "DocumentMoniker": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
+              "RelativeDocumentMoniker": "DML\\fill_denormalized.sql",
+              "ToolTip": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
+              "RelativeToolTip": "DML\\fill_denormalized.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-03T08:00:05.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Lab2ETL.csproj",
+              "DocumentMoniker": "D:\\Lab2ETL\\Lab2ETL.csproj",
+              "RelativeDocumentMoniker": "Lab2ETL.csproj",
+              "ToolTip": "D:\\Lab2ETL\\Lab2ETL.csproj",
+              "RelativeToolTip": "Lab2ETL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-03T12:50:56.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "orders_denormalized.sql",
               "DocumentMoniker": "D:\\Lab2ETL\\DDL\\orders_denormalized.sql",
               "RelativeDocumentMoniker": "DDL\\orders_denormalized.sql",
@@ -123,21 +196,19 @@
               "RelativeToolTip": "DDL\\orders_denormalized.sql",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-03T07:38:54.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T07:38:54.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataTransformer.cs",
-              "DocumentMoniker": "D:\\Lab2ETL\\DataTransformer.cs",
-              "RelativeDocumentMoniker": "DataTransformer.cs",
-              "ToolTip": "D:\\Lab2ETL\\DataTransformer.cs",
-              "RelativeToolTip": "DataTransformer.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAqwLsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "ExportModule.cs",
+              "DocumentMoniker": "D:\\Lab2ETL\\Export\\ExportModule.cs",
+              "RelativeDocumentMoniker": "Export\\ExportModule.cs",
+              "ToolTip": "D:\\Lab2ETL\\Export\\ExportModule.cs",
+              "RelativeToolTip": "Export\\ExportModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:36:36.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T07:56:00.48Z"
             }
           ]
         }

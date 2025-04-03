@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Lab2ETL
+namespace Lab2ETL.Export
 {
     class ExportModule
     {

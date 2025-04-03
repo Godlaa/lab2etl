@@ -63,49 +63,21 @@ namespace Lab2ETL
         }
 
 
-        public List<Dictionary<string, object>> ExtractData()
+        public async Task<List<Dictionary<string, object>>> ExtractDataAsync(int communicatorType)
         {
-            List<Dictionary<string, object>> records = new List<Dictionary<string, object>>();
-            using (var sqliteConn = new SqliteConnection(sqliteConnString))
+            Communicator communicator = communicatorType switch
             {
-                sqliteConn.Open();
-                string query = "SELECT data FROM orders_denormalized";
-                using (var cmd = new SqliteCommand(query, sqliteConn))
-                {
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            string rowData = reader.GetString(0);
-                            var fields = rowData.Split(',');
+                (int)Communicator.Type.Socket => new SocketCommunicator(8080),
+                (int)Communicator.Type.Queue => new QueueCommunicator("localhost", "orders"),
+                _ => throw new ArgumentException("Неподдерживаемый тип коммуникатора")
+            };
 
-                            if (fields.Length != 7)
-                            {
-                                throw new Exception("Неверный формат данных в строке!");
-                            }
-
-                            Dictionary<string, object> row = new Dictionary<string, object>();
-                            row["order_date"] = DateTime.Parse(fields[0].Trim());
-                            row["customer_name"] = fields[1].Trim();
-                            row["customer_phone"] = fields[2].Trim();
-                            row["product_name"] = fields[3].Trim();
-                            row["product_category"] = fields[4].Trim();
-                            row["product_price"] = decimal.Parse(fields[5].Trim(), CultureInfo.InvariantCulture);
-                            row["quantity"] = Convert.ToInt32(fields[6].Trim());
-
-                            records.Add(row);
-                        }
-                    }
-                }
-                sqliteConn.Close();
-            }
-            return records;
+            return await communicator.GetMessage();
         }
 
-
-        public void TransformAndLoad()
+        public async Task TransformAndLoadAsync(int communicatorType)
         {
-            List<Dictionary<string, object>> records = ExtractData();
+            List<Dictionary<string, object>> records = await ExtractDataAsync(communicatorType);
             if (records.Count == 0) throw new Exception("Нет данных для обработки!");
 
             Dictionary<string, int> customersCache = new Dictionary<string, int>();

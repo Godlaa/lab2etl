@@ -6,10 +6,11 @@ using Npgsql;
 using System.IO;
 using Lab2ETL;
 using System.Text;
+using Lab2ETL.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         string host = "localhost";
@@ -19,8 +20,9 @@ class Program
         string password = "12345";
         string sqliteConnString = @"Data Source=D:\sqliteDB\orders_denormalized.db";
         string pgConnString = $"Host={host};Port={port};Database={dbName};Username={user};Password={password};";
-        string[] actions = { "1. Создать таблицу в SQLite", "2. Создать таблицу в PostgreSQL", "3. Заполнить таблицу в SQLite", "4. Экспортировать данные в PostgreSQL", "5. Экспорт в Excel", "6. Выход" };
+        string[] actions = { "1. Создать таблицу в SQLite", "2. Создать таблицу в PostgreSQL", "3. Заполнить таблицу в SQLite", "4. Экспортировать данные в PostgreSQL", "5. Экспорт в Excel", "6. Выбор метода получения данных Сокеты/Очередь сообщений", "7. Выход" };
         bool done = false;
+        int communticator = -1;
 
         DataTransformer transformer = new DataTransformer(sqliteConnString, pgConnString);
 
@@ -46,15 +48,39 @@ class Program
                     transformer.FillSqliteTable();
                     break;
                 case "4":
-                    transformer.TransformAndLoad();
+                    if (communticator == -1)
+                    {
+                        Console.WriteLine("Нужно выбрать тип коммуникатора");
+                        return;
+                    }
+                    else
+                    {
+                        await transformer.TransformAndLoadAsync(communticator);
+                    }
                     break;
                 case "5":
                     string pythonPath = @"C:\\Python313\python.exe";
-                    string scriptPath = @"D:\Lab2ETL\export_report.py";
-                    string outputFile = @"D:\Lab2ETL\report.xlsx";
+                    string scriptPath = @"D:\Lab2ETL\Export\export_report.py";
+                    string outputFile = @"D:\Lab2ETL\Export\report.xlsx";
                     ExportModule.ExportReportUsingPython(pythonPath, scriptPath, outputFile, dbName, user, password, host, port);
                     break;
                 case "6":
+                    Console.Clear();
+                    Console.Write("1. Сокеты\n2. Очередь сообщений\n");
+                    switch (int.Parse(Console.ReadLine()) - 1)
+                    {
+                        case (int)Communicator.Type.Socket:
+                            communticator = (int)Communicator.Type.Socket;
+                            break;
+                        case (int)Communicator.Type.Queue:
+                            communticator = (int)Communicator.Type.Queue;
+                            break;
+                        default:
+                            Console.WriteLine("Выбран несуществующий тип");
+                            break;
+                    }
+                    break;
+                case "7":
                     done = true;
                     break;
                 default:
