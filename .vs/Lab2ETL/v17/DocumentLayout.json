@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Lab2ETL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\ddl\\normalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:ddl\\normalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\ddl\\orders_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:ddl\\orders_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\dml\\fill_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:dml\\fill_denormalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Lab2ETL\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Lab2ETL\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:32:33.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fill_denormalized.sql",
+              "DocumentMoniker": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
+              "RelativeDocumentMoniker": "DML\\fill_denormalized.sql",
+              "ToolTip": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
+              "RelativeToolTip": "DML\\fill_denormalized.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-03T08:00:05.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExportModule.cs",
+              "DocumentMoniker": "D:\\Lab2ETL\\ExportModule.cs",
+              "RelativeDocumentMoniker": "ExportModule.cs",
+              "ToolTip": "D:\\Lab2ETL\\ExportModule.cs",
+              "RelativeToolTip": "ExportModule.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:56:00.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "export_report.py",
+              "DocumentMoniker": "D:\\Lab2ETL\\export_report.py",
+              "RelativeDocumentMoniker": "export_report.py",
+              "ToolTip": "D:\\Lab2ETL\\export_report.py",
+              "RelativeToolTip": "export_report.py",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVDhPpZCxaxNhGMZ/9zVJaUuDUlq1FBWLZBFTCXo4BFyU1qGKi4OkIHhkzF/g0KF00M2lR9YUdDDQQVAcJILoQUd1UNRmkhoRm8RL777v7nOoCZd4AcEH3uF5nvd73vd74X\u002BgtTai3LIsHeWDEEJct217a1DvwbIs7bpubFUqFW3b9naxWLwWfSOipAvHcfqqi0KhkMtms3cty1rsaomeG4FpmoMSANVqlXQ6nQMWgacMC4hOBchduEj\u002ByjKjScGh8SS1Wq3nxQZEN3j1eY/Vrfe8rTeQvsf89ARLS1cz5XIZ/uUGXxptQiVRUhJIybudXaZn52a7vbEBpmkyNb/A69YM9W8tDEJOTI2hpI\u002BSkvOZH2f13sNAB\u002B07sV9wHIdH9Unquz9RvoeUPtL3UFISKkky\u002BAT7HwTi6FpsgGma3N9\u002Bg5I\u002BKaFZyU8wOpJChwHnjiuE9wKCXyC/zsQGOI7DeELjtiUPbgky6Wd/HA3KBelC4AIpNfQGl88cQ0mfI5PugRhKkM2DUk0INYwtPI/dAGAlf4rbl06T6DyBVgeCABJzYPhwcm0V8ICNvwJKpVIf37h3IxSyKVAuBMDIYQAMw1jvaxwGrYNl3Xq5o79vat3Y3Nedj4\u002B11je7/m\u002BXOuyzFtDhUgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-04-03T07:55:19.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "normalized.sql",
+              "DocumentMoniker": "D:\\Lab2ETL\\DDL\\normalized.sql",
+              "RelativeDocumentMoniker": "DDL\\normalized.sql",
+              "ToolTip": "D:\\Lab2ETL\\DDL\\normalized.sql",
+              "RelativeToolTip": "DDL\\normalized.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-03T07:40:39.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "orders_denormalized.sql",
+              "DocumentMoniker": "D:\\Lab2ETL\\DDL\\orders_denormalized.sql",
+              "RelativeDocumentMoniker": "DDL\\orders_denormalized.sql",
+              "ToolTip": "D:\\Lab2ETL\\DDL\\orders_denormalized.sql",
+              "RelativeToolTip": "DDL\\orders_denormalized.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-03T07:38:54.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataTransformer.cs",
+              "DocumentMoniker": "D:\\Lab2ETL\\DataTransformer.cs",
+              "RelativeDocumentMoniker": "DataTransformer.cs",
+              "ToolTip": "D:\\Lab2ETL\\DataTransformer.cs",
+              "RelativeToolTip": "DataTransformer.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAqwLsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:36:36.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
