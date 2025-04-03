@@ -56,7 +56,7 @@ namespace Lab2ETL
             using (var sqliteConn = new SqliteConnection(sqliteConnString))
             {
                 sqliteConn.Open();
-                string dml = File.ReadAllText("D:\\Lab2ETL\\DML\\fill_denormalized.sql", Encoding.GetEncoding("windows-1251"));
+                string dml = File.ReadAllText("D:\\Lab2ETL\\DML\\fill_denormalized.sql");
                 var command = new SqliteCommand(dml, sqliteConn);
                 command.ExecuteNonQuery();
                 sqliteConn.Close();
