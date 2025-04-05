@@ -18,6 +18,7 @@ RUN /app/venv/bin/pip install SQLAlchemy psycopg2 pandas openpyxl
 RUN mkdir -p DDL
 COPY --from=build /src/DDL ./DDL
 COPY --from=build /src/DML ./DML
+COPY --from=build /src/Export ./Export
 COPY --from=build /app .
 
 ENTRYPOINT ["dotnet", "Lab2ETL.dll"]
