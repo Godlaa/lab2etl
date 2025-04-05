@@ -7,17 +7,19 @@ RUN dotnet restore
 COPY . .
 RUN dotnet publish -c Release -o /app
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y python3 python3-pip && \
-    pip3 install SQLAlchemy psycopg2 pandas openpyxl
+RUN apt-get update && apt-get install -y python3-full python3-venv
+
+RUN python3 -m venv /app/venv
+RUN /app/venv/bin/pip install --upgrade pip
+
+RUN /app/venv/bin/pip install SQLAlchemy psycopg2 pandas openpyxl
 
 RUN mkdir -p DDL
-
 COPY --from=build /src/DDL ./DDL
-
 COPY --from=build /src/DML ./DML
-
 COPY --from=build /app .
+
 ENTRYPOINT ["dotnet", "Lab2ETL.dll"]

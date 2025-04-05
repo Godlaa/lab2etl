@@ -58,9 +58,9 @@ class Program
                     }
                     break;
                 case "5":
-                    string pythonPath = @"C:\\Python313\python.exe";
-                    string scriptPath = @"D:\Lab2ETL\Export\export_report.py";
-                    string outputFile = @"D:\Lab2ETL\Export\report.xlsx";
+                    string pythonPath = "/app/venv/bin/python";
+                    string scriptPath = "/app/Export/export_report.py";
+                    string outputFile = "/app/Export/report.xlsx";
                     ExportModule.ExportReportUsingPython(pythonPath, scriptPath, outputFile, dbName, user, password, host, port);
                     break;
                 case "6":
