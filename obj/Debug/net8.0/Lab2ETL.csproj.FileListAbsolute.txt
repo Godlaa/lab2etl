@@ -28,3 +28,5 @@ D:\Lab2ETL\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 D:\Lab2ETL\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 D:\Lab2ETL\obj\Debug\net8.0\Lab2ETL.sourcelink.json
 D:\Lab2ETL\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\Lab2ETL\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\Lab2ETL\bin\Debug\net8.0\System.Threading.RateLimiting.dll

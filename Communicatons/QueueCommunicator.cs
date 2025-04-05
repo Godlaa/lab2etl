@@ -1,7 +1,8 @@
-﻿using RabbitMQ.Client.Events;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using System.Text;
 using System.Globalization;
+using RabbitMQ.Client.Events;
+using System.Threading;
 
 public class QueueCommunicator : Communicator
 {
@@ -14,7 +15,7 @@ public class QueueCommunicator : Communicator
         this._hostName = hostName;
         this._queueName = queueName;
         var cts = new CancellationTokenSource();
-        cts.CancelAfter(10000);
+        cts.CancelAfter(30000);
         this._cancellationToken = cts.Token;
     }
 
@@ -29,46 +30,47 @@ public override async Task<List<Dictionary<string, object>>> GetMessage()
         Password = "password" 
     };
 
-    using var connection = factory.CreateConnection();
-    using var channel = connection.CreateModel();
+    using var connection = await factory.CreateConnectionAsync();
+    using var channel = await connection.CreateChannelAsync();
 
-    channel.QueueDeclare(
+        await channel.QueueDeclareAsync(
         queue: this._queueName,
         durable: false,
         exclusive: false,
-        autoDelete: false,
+        autoDelete: true,
         arguments: null
     );
 
     var consumer = new AsyncEventingBasicConsumer(channel);
-    var completionSource = new TaskCompletionSource<bool>();
+    string consumerTag = await channel.BasicConsumeAsync(this._queueName, false, consumer);
+    var waitForMessage = new TaskCompletionSource();
 
-    consumer.Received += async (model, ea) =>
+    consumer.ReceivedAsync += async (ch, ea) =>
     {
         try
         {
+            waitForMessage.TrySetResult();
             var body = ea.Body.ToArray();
             string message = Encoding.UTF8.GetString(body);
             ProcessMessage(message, records);
-            channel.BasicAck(ea.DeliveryTag, multiple: false);
+            await channel.BasicAckAsync(ea.DeliveryTag, false);
             Console.WriteLine($"Сообщение обработано: {message}");
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Ошибка обработки: {ex.Message}");
-            channel.BasicNack(ea.DeliveryTag, multiple: false, requeue: true);
         }
-        await Task.Yield();
     };
 
-    channel.BasicConsume(
-        queue: this._queueName,
-        autoAck: false,
-        consumer: consumer
+    await Task.WhenAny(
+        waitForMessage.Task,
+        Task.Delay(10000, default)
     );
 
-    await Task.Delay(-1, this._cancellationToken);
-
+        await channel.CloseAsync();
+    await connection.CloseAsync();
+    await channel.DisposeAsync();
+    await connection.DisposeAsync();
     return records;
 }
 
@@ -96,7 +98,6 @@ public override async Task<List<Dictionary<string, object>>> GetMessage()
             };
 
             records.Add(record);
-            Console.WriteLine($"Обработано сообщение: {message}");
         }
         catch (Exception ex)
         {
