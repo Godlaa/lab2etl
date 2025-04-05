@@ -10,11 +10,9 @@ RUN dotnet publish -c Release -o /app
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y python3-full python3-venv
-
+RUN apt-get update && apt-get install -y python3-full python3-venv libpq-dev gcc python3-dev
 RUN python3 -m venv /app/venv
 RUN /app/venv/bin/pip install --upgrade pip
-
 RUN /app/venv/bin/pip install SQLAlchemy psycopg2 pandas openpyxl
 
 RUN mkdir -p DDL
