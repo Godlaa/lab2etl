@@ -17,23 +17,33 @@ public class QueueCommunicator : Communicator
     public override async Task<List<Dictionary<string, object>>> GetMessage()
     {
         var records = new List<Dictionary<string, object>>();
-        var factory = new ConnectionFactory { HostName = _hostName };
+        var factory = new ConnectionFactory { HostName = this._hostName };
 
         using var connection = factory.CreateConnection();
         using var channel = connection.CreateModel();
-        var consumer = new EventingBasicConsumer(channel);
 
-        var tcs = new TaskCompletionSource();
-        consumer.Received += (model, ea) =>
+        channel.QueueDeclare(queue: this._queueName,
+                             durable: false,
+                             exclusive: false,
+                             autoDelete: false,
+                             arguments: null);
+
+        var consumer = new AsyncEventingBasicConsumer(channel);
+        consumer.Received += async (model, ea) =>
         {
-            var message = Encoding.UTF8.GetString(ea.Body.ToArray());
+            var body = ea.Body.ToArray();
+            string message = Encoding.UTF8.GetString(body);
             ProcessMessage(message, records);
             channel.BasicAck(ea.DeliveryTag, false);
+            await Task.Yield();
         };
 
-        channel.BasicConsume(_queueName, false, consumer);
+        string consumerTag = channel.BasicConsume(queue: this._queueName,
+                                                    autoAck: false,
+                                                    consumer: consumer);
 
-        await Task.Delay(-1, new CancellationToken(true));
+        await Task.Delay(TimeSpan.FromSeconds(5));
+        channel.BasicCancel(consumerTag);
 
         return records;
     }
