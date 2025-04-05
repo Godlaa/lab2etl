@@ -17,7 +17,7 @@ public class QueueCommunicator : Communicator
     public override async Task<List<Dictionary<string, object>>> GetMessage()
     {
         var records = new List<Dictionary<string, object>>();
-        var factory = new ConnectionFactory { HostName = this._hostName };
+        var factory = new ConnectionFactory { HostName = this._hostName, Port = 5672, UserName = "admin", Password = "password" };
 
         using var connection = factory.CreateConnection();
         using var channel = connection.CreateModel();
