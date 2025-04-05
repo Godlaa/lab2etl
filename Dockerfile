@@ -10,6 +10,9 @@ RUN dotnet publish -c Release -o /app
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y python3 python3-pip && \
+    pip3 install SQLAlchemy psycopg2 pandas openpyxl
+
 RUN mkdir -p DDL
 
 COPY --from=build /src/DDL ./DDL
