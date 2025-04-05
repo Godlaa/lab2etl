@@ -79,6 +79,7 @@ namespace Lab2ETL
         public async Task TransformAndLoadAsync(int communicatorType)
         {
             List<Dictionary<string, object>> records = await ExtractDataAsync(communicatorType);
+            Console.ReadKey();
             if (records.Count == 0) throw new Exception("Нет данных для обработки!");
 
             Dictionary<string, int> customersCache = new Dictionary<string, int>();
