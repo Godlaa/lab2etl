@@ -69,7 +69,7 @@ namespace Lab2ETL
             Communicator communicator = communicatorType switch
             {
                 (int)Communicator.Type.Socket => new SocketCommunicator(8080),
-                (int)Communicator.Type.Queue => new QueueCommunicator("localhost", "orders"),
+                (int)Communicator.Type.Queue => new QueueCommunicator("89.169.36.129", "orders"),
                 _ => throw new ArgumentException("Неподдерживаемый тип коммуникатора")
             };
 
