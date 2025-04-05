@@ -7,46 +7,70 @@ public class QueueCommunicator : Communicator
 {
     private readonly string _hostName;
     private readonly string _queueName;
+    private readonly CancellationToken _cancellationToken;
 
     public QueueCommunicator(string hostName, string queueName)
     {
-        _hostName = hostName;
-        _queueName = queueName;
+        this._hostName = hostName;
+        this._queueName = queueName;
+        var cts = new CancellationTokenSource();
+        cts.CancelAfter(10000);
+        this._cancellationToken = cts.Token;
     }
 
-    public override async Task<List<Dictionary<string, object>>> GetMessage()
+public override async Task<List<Dictionary<string, object>>> GetMessage()
+{
+    var records = new List<Dictionary<string, object>>();
+    var factory = new ConnectionFactory 
+    { 
+        HostName = this._hostName, 
+        Port = 5672, 
+        UserName = "admin", 
+        Password = "password" 
+    };
+
+    using var connection = factory.CreateConnection();
+    using var channel = connection.CreateModel();
+
+    channel.QueueDeclare(
+        queue: this._queueName,
+        durable: false,
+        exclusive: false,
+        autoDelete: false,
+        arguments: null
+    );
+
+    var consumer = new AsyncEventingBasicConsumer(channel);
+    var completionSource = new TaskCompletionSource<bool>();
+
+    consumer.Received += async (model, ea) =>
     {
-        var records = new List<Dictionary<string, object>>();
-        var factory = new ConnectionFactory { HostName = this._hostName, Port = 5672, UserName = "admin", Password = "password" };
-
-        using var connection = factory.CreateConnection();
-        using var channel = connection.CreateModel();
-
-        channel.QueueDeclare(queue: this._queueName,
-                             durable: false,
-                             exclusive: false,
-                             autoDelete: false,
-                             arguments: null);
-
-        var consumer = new AsyncEventingBasicConsumer(channel);
-        consumer.Received += async (model, ea) =>
+        try
         {
             var body = ea.Body.ToArray();
             string message = Encoding.UTF8.GetString(body);
             ProcessMessage(message, records);
-            channel.BasicAck(ea.DeliveryTag, false);
-            await Task.Yield();
-        };
+            channel.BasicAck(ea.DeliveryTag, multiple: false);
+            Console.WriteLine($"Сообщение обработано: {message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка обработки: {ex.Message}");
+            channel.BasicNack(ea.DeliveryTag, multiple: false, requeue: true);
+        }
+        await Task.Yield();
+    };
 
-        string consumerTag = channel.BasicConsume(queue: this._queueName,
-                                                    autoAck: false,
-                                                    consumer: consumer);
+    channel.BasicConsume(
+        queue: this._queueName,
+        autoAck: false,
+        consumer: consumer
+    );
 
-        await Task.Delay(TimeSpan.FromSeconds(5));
-        channel.BasicCancel(consumerTag);
+    await Task.Delay(-1, this._cancellationToken);
 
-        return records;
-    }
+    return records;
+}
 
     private void ProcessMessage(string message, List<Dictionary<string, object>> records)
     {

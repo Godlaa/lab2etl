@@ -73,6 +73,7 @@ namespace Lab2ETL
                 _ => throw new ArgumentException("Неподдерживаемый тип коммуникатора")
             };
 
+	    Console.ReadKey();
             return await communicator.GetMessage();
         }
 
