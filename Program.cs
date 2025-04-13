@@ -62,6 +62,7 @@ class Program
                     string scriptPath = "/app/Export/export_report.py";
                     string outputFile = "/app/Export/report.xlsx";
                     ExportModule.ExportReportUsingPython(pythonPath, scriptPath, outputFile, dbName, user, password, host, port);
+                    Console.ReadKey();
                     break;
                 case "6":
                     Console.Clear();
