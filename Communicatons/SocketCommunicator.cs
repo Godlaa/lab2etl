@@ -4,12 +4,16 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 public class SocketCommunicator : Communicator
 {
     private readonly int _port;
+    private readonly string _certPath = "app/bundle.pfx";
+    private readonly string _certPassword = "";
 
     public SocketCommunicator(int port)
     {
@@ -27,8 +31,14 @@ public class SocketCommunicator : Communicator
         {
             using var client = await listener.AcceptTcpClientAsync();
             using var networkStream = client.GetStream();
-            using var reader = new BinaryReader(networkStream, Encoding.UTF8, leaveOpen: true);
 
+            var serverCertificate = new X509Certificate2(this._certPath, this._certPassword);
+
+            using var sslStream = new SslStream(networkStream, false);
+            await sslStream.AuthenticateAsServerAsync(serverCertificate);
+            Console.WriteLine("SSL-аутентификация выполнена на сервере.");
+
+            using var reader = new BinaryReader(sslStream, Encoding.UTF8, leaveOpen: true);
             while (true)
             {
                 int length;
@@ -41,7 +51,7 @@ public class SocketCommunicator : Communicator
                     break;
                 }
 
-                byte[] data = await ReadExactlyAsync(networkStream, length);
+                byte[] data = await ReadExactlyAsync(sslStream, length);
                 if (data.Length < length)
                 {
                     Console.WriteLine("Получено неполное сообщение.");
@@ -61,13 +71,13 @@ public class SocketCommunicator : Communicator
         return records;
     }
 
-    private async Task<byte[]> ReadExactlyAsync(NetworkStream stream, int count)
+    private async Task<byte[]> ReadExactlyAsync(SslStream sslStream, int count)
     {
         byte[] buffer = new byte[count];
         int offset = 0;
         while (offset < count)
         {
-            int bytesRead = await stream.ReadAsync(buffer, offset, count - offset);
+            int bytesRead = await sslStream.ReadAsync(buffer, offset, count - offset);
             if (bytesRead == 0)
             {
                 break;
@@ -84,7 +94,6 @@ public class SocketCommunicator : Communicator
     private void ProcessLine(string line, List<Dictionary<string, object>> records)
     {
         var fields = line.Split(',', StringSplitOptions.RemoveEmptyEntries);
-
         if (fields.Length != 7)
         {
             Console.WriteLine($"Некорректный формат строки: {line}");
