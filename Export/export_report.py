@@ -61,8 +61,6 @@ def export_to_excel(output_file, db_params):
         print(f"Данные успешно экспортированы в {output_file}")
         print(df_overall)
 
-        truncate_all_tables(db_params)
-
     except Exception as e:
         print(f"Ошибка экспорта: {e}")
 
@@ -81,3 +79,5 @@ if __name__ == "__main__":
     }
     
     export_to_excel(output_file, db_params)
+    truncate_all_tables(db_params)
+
