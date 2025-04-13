@@ -67,7 +67,8 @@ public override async Task<List<Dictionary<string, object>>> GetMessage()
         Task.Delay(10000, default)
     );
 
-        await channel.CloseAsync();
+    await channel.BasicCancelAsync(consumerTag);
+    await channel.CloseAsync();
     await connection.CloseAsync();
     await channel.DisposeAsync();
     await connection.DisposeAsync();
