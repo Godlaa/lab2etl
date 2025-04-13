@@ -24,6 +24,10 @@ public class SocketCommunicator : Communicator
             totalRead += bytesRead;
         }
 
+        if (BitConverter.IsLittleEndian)
+        {
+            Array.Reverse(lengthBuffer);
+        }
         int messageLength = BitConverter.ToInt32(lengthBuffer, 0);
 
         byte[] messageBuffer = new byte[messageLength];
@@ -38,6 +42,7 @@ public class SocketCommunicator : Communicator
 
         return Encoding.UTF8.GetString(messageBuffer);
     }
+
 
     public override async Task<List<Dictionary<string, object>>> GetMessage()
     {
