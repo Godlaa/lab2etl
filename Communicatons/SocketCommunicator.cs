@@ -1,7 +1,11 @@
-﻿using System.Net.Sockets;
-using System.Net;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 
 public class SocketCommunicator : Communicator
 {
@@ -12,71 +16,70 @@ public class SocketCommunicator : Communicator
         _port = port;
     }
 
-    private async Task<string> ReadMessageAsync(NetworkStream stream)
-    {
-        byte[] lengthBuffer = new byte[42];
-        int totalRead = 0;
-        while (totalRead < 42)
-        {
-            int bytesRead = await stream.ReadAsync(lengthBuffer, totalRead, 42 - totalRead);
-            if (bytesRead == 0)
-                throw new Exception("Соединение разорвано до получения заголовка!");
-            totalRead += bytesRead;
-        }
-
-        if (BitConverter.IsLittleEndian)
-        {
-            Array.Reverse(lengthBuffer);
-        }
-        int messageLength = BitConverter.ToInt32(lengthBuffer, 0);
-
-        byte[] messageBuffer = new byte[messageLength];
-        totalRead = 0;
-        while (totalRead < messageLength)
-        {
-            int bytesRead = await stream.ReadAsync(messageBuffer, totalRead, messageLength - totalRead);
-            if (bytesRead == 0)
-                throw new Exception("Соединение разорвано до получения всего сообщения!");
-            totalRead += bytesRead;
-        }
-
-        return Encoding.UTF8.GetString(messageBuffer);
-    }
-
-
     public override async Task<List<Dictionary<string, object>>> GetMessage()
     {
         var records = new List<Dictionary<string, object>>();
-        var listener = new TcpListener(IPAddress.Any, this._port);
+        var listener = new TcpListener(IPAddress.Any, _port);
         listener.Start();
+        Console.WriteLine($"Слушает на порту {_port}.");
 
         try
         {
             using var client = await listener.AcceptTcpClientAsync();
-            using var stream = client.GetStream();
+            using var networkStream = client.GetStream();
+            using var reader = new BinaryReader(networkStream, Encoding.UTF8, leaveOpen: true);
 
             while (true)
             {
-                string message = await ReadMessageAsync(stream);
-                Console.WriteLine(message);
-                if (!string.IsNullOrEmpty(message))
+                int length;
+                try
                 {
-                    ProcessLine(message, records);
+                    length = reader.ReadInt32();
+                }
+                catch (EndOfStreamException)
+                {
+                    break;
+                }
+
+                byte[] data = await ReadExactlyAsync(networkStream, length);
+                if (data.Length < length)
+                {
+                    Console.WriteLine("Получено неполное сообщение.");
+                    break;
+                }
+                string line = Encoding.UTF8.GetString(data);
+                if (!string.IsNullOrEmpty(line))
+                {
+                    ProcessLine(line, records);
                 }
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Ошибка: " + ex.Message);
         }
         finally
         {
             listener.Stop();
         }
-
         return records;
     }
 
+    private async Task<byte[]> ReadExactlyAsync(NetworkStream stream, int count)
+    {
+        byte[] buffer = new byte[count];
+        int offset = 0;
+        while (offset < count)
+        {
+            int bytesRead = await stream.ReadAsync(buffer, offset, count - offset);
+            if (bytesRead == 0)
+            {
+                break;
+            }
+            offset += bytesRead;
+        }
+        if (offset < count)
+        {
+            Array.Resize(ref buffer, offset);
+        }
+        return buffer;
+    }
 
     private void ProcessLine(string line, List<Dictionary<string, object>> records)
     {
