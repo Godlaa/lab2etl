@@ -63,6 +63,33 @@ namespace Lab2ETL
             }
         }
 
+        public void ClearPostgresTables()
+        {
+            try
+            {
+                using (var pgConn = new NpgsqlConnection(pgConnString))
+                {
+                    pgConn.Open();
+
+                    string truncateSql = @"
+                        TRUNCATE TABLE order_details, orders, products, customers, categories
+                        RESTART IDENTITY CASCADE;
+                    ";
+
+                    using (var cmd = new NpgsqlCommand(truncateSql, pgConn))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    pgConn.Close();
+                }
+                Console.WriteLine("Данные во всех таблицах PostgreSQL успешно очищены.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка при очистке таблиц: " + ex.Message);
+            }
+        }
 
         public async Task<List<Dictionary<string, object>>> ExtractDataAsync(int communicatorType)
         {
