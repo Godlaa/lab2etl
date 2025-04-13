@@ -2,6 +2,23 @@
 import pandas as pd
 import sys
 
+def truncate_all_tables(db_params):
+    engine = create_engine(
+        f"postgresql://{db_params['user']}:{db_params['password']}@"
+        f"{db_params['host']}:{db_params['port']}/{db_params['dbname']}"
+    )
+    with engine.connect() as conn:
+        result = conn.execute(text("""
+            SELECT tablename FROM pg_tables WHERE schemaname = 'public';
+        """))
+        tables = [row[0] for row in result]
+        if tables:
+            truncate_stmt = f"TRUNCATE TABLE {', '.join(tables)} CASCADE;"
+            conn.execute(text(truncate_stmt))
+            print("Все таблицы успешно очищены.")
+        else:
+            print("В схеме public нет таблиц для очистки.")
+
 def export_to_excel(output_file, db_params):
     try:
         engine = create_engine(
@@ -43,6 +60,8 @@ def export_to_excel(output_file, db_params):
         
         print(f"Данные успешно экспортированы в {output_file}")
         print(df_overall)
+
+        truncate_all_tables(db_params)
 
     except Exception as e:
         print(f"Ошибка экспорта: {e}")

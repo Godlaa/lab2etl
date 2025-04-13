@@ -7,16 +7,28 @@
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:communicatons\\socketcommunicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\communicatons\\communicators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:communicatons\\communicators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:datatransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\communicatons\\queuecommunicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:communicatons\\queuecommunicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\lab2etl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -31,24 +43,12 @@
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:ddl\\normalized.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\communicatons\\queuecommunicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:communicatons\\queuecommunicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\export\\export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:export\\export_report.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{523DAB1B-7D7F-43C1-B7DC-740DB3667C2C}|Lab2ETL.csproj|d:\\lab2etl\\export\\exportmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Communicators.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\Communicatons\\Communicators.cs",
               "RelativeDocumentMoniker": "Communicatons\\Communicators.cs",
@@ -91,13 +91,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\Lab2ETL\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "D:\\Lab2ETL\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-04-13T07:46:04.455Z",
               "EditorCaption": ""
@@ -110,40 +110,40 @@
               "RelativeDocumentMoniker": "Communicatons\\SocketCommunicator.cs",
               "ToolTip": "D:\\Lab2ETL\\Communicatons\\SocketCommunicator.cs",
               "RelativeToolTip": "Communicatons\\SocketCommunicator.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwHAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T07:23:51.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Lab2ETL\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAgwFcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T19:46:04.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "QueueCommunicator.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\Communicatons\\QueueCommunicator.cs",
               "RelativeDocumentMoniker": "Communicatons\\QueueCommunicator.cs",
               "ToolTip": "D:\\Lab2ETL\\Communicatons\\QueueCommunicator.cs",
               "RelativeToolTip": "Communicatons\\QueueCommunicator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T17:53:54.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Lab2ETL\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -156,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "export_report.py",
               "DocumentMoniker": "D:\\Lab2ETL\\Export\\export_report.py",
               "RelativeDocumentMoniker": "Export\\export_report.py",
@@ -169,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "normalized.sql",
               "DocumentMoniker": "D:\\Lab2ETL\\DDL\\normalized.sql",
               "RelativeDocumentMoniker": "DDL\\normalized.sql",
@@ -182,20 +182,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DataTransformer.cs",
               "DocumentMoniker": "D:\\Lab2ETL\\DataTransformer.cs",
               "RelativeDocumentMoniker": "DataTransformer.cs",
               "ToolTip": "D:\\Lab2ETL\\DataTransformer.cs",
               "RelativeToolTip": "DataTransformer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAlwEYAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T07:36:36.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "D:\\Lab2ETL\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -208,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "fill_denormalized.sql",
               "DocumentMoniker": "D:\\Lab2ETL\\DML\\fill_denormalized.sql",
               "RelativeDocumentMoniker": "DML\\fill_denormalized.sql",
@@ -221,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Lab2ETL.csproj",
               "DocumentMoniker": "D:\\Lab2ETL\\Lab2ETL.csproj",
               "RelativeDocumentMoniker": "Lab2ETL.csproj",
