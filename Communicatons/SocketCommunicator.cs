@@ -53,6 +53,7 @@ public class SocketCommunicator : Communicator
             while (true)
             {
                 string message = await ReadMessageAsync(stream);
+                Console.WriteLine(message);
                 if (!string.IsNullOrEmpty(message))
                 {
                     ProcessLine(message, records);
