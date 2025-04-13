@@ -1,6 +1,7 @@
 ﻿using System.Net.Sockets;
 using System.Net;
 using System.Globalization;
+using System.Text;
 
 public class SocketCommunicator : Communicator
 {
@@ -9,6 +10,33 @@ public class SocketCommunicator : Communicator
     public SocketCommunicator(int port)
     {
         _port = port;
+    }
+
+    private async Task<string> ReadMessageAsync(NetworkStream stream)
+    {
+        byte[] lengthBuffer = new byte[42];
+        int totalRead = 0;
+        while (totalRead < 42)
+        {
+            int bytesRead = await stream.ReadAsync(lengthBuffer, totalRead, 42 - totalRead);
+            if (bytesRead == 0)
+                throw new Exception("Соединение разорвано до получения заголовка!");
+            totalRead += bytesRead;
+        }
+
+        int messageLength = BitConverter.ToInt32(lengthBuffer, 0);
+
+        byte[] messageBuffer = new byte[messageLength];
+        totalRead = 0;
+        while (totalRead < messageLength)
+        {
+            int bytesRead = await stream.ReadAsync(messageBuffer, totalRead, messageLength - totalRead);
+            if (bytesRead == 0)
+                throw new Exception("Соединение разорвано до получения всего сообщения!");
+            totalRead += bytesRead;
+        }
+
+        return Encoding.UTF8.GetString(messageBuffer);
     }
 
     public override async Task<List<Dictionary<string, object>>> GetMessage()
@@ -21,16 +49,19 @@ public class SocketCommunicator : Communicator
         {
             using var client = await listener.AcceptTcpClientAsync();
             using var stream = client.GetStream();
-            using var reader = new StreamReader(stream);
 
-            while (!reader.EndOfStream)
+            while (true)
             {
-                var line = await reader.ReadLineAsync();
-                if (!string.IsNullOrEmpty(line))
+                string message = await ReadMessageAsync(stream);
+                if (!string.IsNullOrEmpty(message))
                 {
-                    ProcessLine(line, records);
+                    ProcessLine(message, records);
                 }
             }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Ошибка: " + ex.Message);
         }
         finally
         {
@@ -39,6 +70,7 @@ public class SocketCommunicator : Communicator
 
         return records;
     }
+
 
     private void ProcessLine(string line, List<Dictionary<string, object>> records)
     {
