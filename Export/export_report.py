@@ -2,22 +2,24 @@
 import pandas as pd
 import sys
 
-def truncate_all_tables(db_params):
-    engine = create_engine(
-        f"postgresql://{db_params['user']}:{db_params['password']}@"
-        f"{db_params['host']}:{db_params['port']}/{db_params['dbname']}"
-    )
-    with engine.connect() as conn:
-        result = conn.execute(text("""
-            SELECT tablename FROM pg_tables WHERE schemaname = 'public';
-        """))
-        tables = [row[0] for row in result]
-        if tables:
-            truncate_stmt = f"TRUNCATE TABLE {', '.join(tables)} CASCADE;"
-            conn.execute(text(truncate_stmt))
-            print("Все таблицы успешно очищены.")
-        else:
-            print("В схеме public нет таблиц для очистки.")
+def clear_all_tables(db_params):
+    try:
+        engine = create_engine(
+            f"postgresql://{db_params['user']}:{db_params['password']}@{db_params['host']}:{db_params['port']}/{db_params['dbname']}"
+        )
+
+        truncate_query = text("""
+            TRUNCATE TABLE order_details, orders, customers, products, categories
+            RESTART IDENTITY CASCADE;
+        """)
+
+        with engine.begin() as connection:
+            connection.execute(truncate_query)
+
+        print("Данные во всех таблицах успешно удалены.")
+
+    except Exception as e:
+        print(f"Ошибка при удалении данных: {e}")
 
 def export_to_excel(output_file, db_params):
     try:
@@ -79,5 +81,5 @@ if __name__ == "__main__":
     }
     
     export_to_excel(output_file, db_params)
-    truncate_all_tables(db_params)
+    clear_all_tables(db_params)
 
