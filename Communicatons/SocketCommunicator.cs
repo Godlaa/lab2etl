@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 public class SocketCommunicator : Communicator
 {
     private readonly int _port;
-    private readonly string _certPath = "app/bundle.pfx";
+    private readonly string _certPath = "bundle.pfx";
     private readonly string _certPassword = "";
 
     public SocketCommunicator(int port)

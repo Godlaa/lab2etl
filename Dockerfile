@@ -19,6 +19,9 @@ RUN mkdir -p DDL
 COPY --from=build /src/DDL ./DDL
 COPY --from=build /src/DML ./DML
 COPY --from=build /src/Export ./Export
+COPY --from=build /src/bundle.pfx .
+COPY --from=build /src/bundle.pem .
 COPY --from=build /app .
+COPY --from=build /src/certs ./certs
 
 ENTRYPOINT ["dotnet", "Lab2ETL.dll"]
