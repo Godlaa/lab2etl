@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package exchange;
+option csharp_namespace = "Lab2ETL.Grpc";
+
+message DenormalizedLine {
+  string order_date       = 1;
+  string customer_name    = 2;
+  string customer_phone   = 3;
+  string product_name     = 4;
+  string product_category = 5;
+  double product_price    = 6;
+  int32  quantity         = 7;
+}
+
+message UploadSummary {
+  int32 linesAccepted = 1;
+}
+
+service DataExchange {
+  rpc StreamLines (stream DenormalizedLine) returns (UploadSummary);
+}

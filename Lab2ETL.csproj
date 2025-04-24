@@ -24,6 +24,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
     <PackageReference Include="Npgsql" Version="9.0.3" />
     <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
+    <Protobuf Include="contracts\DataExchange.proto" GrpcServices="Client,Server" />
   </ItemGroup>
 
 </Project>
